@@ -21,11 +21,14 @@ public class Carro {
     public int getVelocidadeAtual() {
         return velocidadeAtual;
     }
+    public Motorista getMotoristadoCarro(){
+        return motoristaDoCarro;
+    }
     
     public Carro(String placa, int numChassi, Motorista motorista) {
         this.placa = placa;
         this.numChassi = numChassi;
-        this.motoristaDoCarro = motorista;
+        this.motoristaDoCarro.setVeiculoAtual(this);;
     }
 
     public Carro(){
