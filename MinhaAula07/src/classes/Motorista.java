@@ -5,6 +5,8 @@ public class Motorista {
     private int matricula;
     private Carro veiculoAtual;
 
+    Carro car = new Carro();
+    
     public String getNome() {
         return nome;
     }
@@ -23,11 +25,18 @@ public class Motorista {
     public void setVeiculoAtual(Carro veiculoAtual) {
         this.veiculoAtual = veiculoAtual;
     }
-    public Motorista(Carro carro){
-        this.veiculoAtual = carro;
+    
+    public Motorista(String nome, int matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
     }
+
+    public void acelerar(){
+        car.acelerar();
+    }
+    
     public void acelerar(int limite){
-        veiculoAtual.acelerar(limite);
+        car.acelerar(limite);
     }
     
     @Override

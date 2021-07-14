@@ -4,6 +4,7 @@ public class Carro {
     private String placa;
     private int numChassi;
     private int velocidadeAtual;
+    Motorista motoristaDoCarro;
 
     public String getPalaca() {
         return placa;
@@ -21,13 +22,18 @@ public class Carro {
         return velocidadeAtual;
     }
     
-    public Carro(String placa, int numChassi) {
+    public Carro(String placa, int numChassi, Motorista motorista) {
         this.placa = placa;
         this.numChassi = numChassi;
+        this.motoristaDoCarro = motorista;
     }
 
-    void acelerar(){
-        velocidadeAtual++;
+    public Carro(){
+
+    }
+
+    void acelerar() {
+        this.velocidadeAtual++;
     }
 
     void acelerar(int limite){
